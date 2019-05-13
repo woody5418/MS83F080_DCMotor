@@ -1,0 +1,430 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=D:\Embedded\HI-TECH Software\PICC\9.83\dat\en_msgs.txt -cs \
+  -h+ms83f080_dcmotor.sym -z -Q16F685 -ol.obj -Mms83f080_dcmotor.map -E1 \
+  -ACONST=00h-0FFhx8 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
+  -AENTRY=00h-0FFhx8 -ASTRING=00h-0FFhx8 -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0BFh -ARAM=020h-06Fh,0A0h-0BFh -AABS1=020h-07Fh,0A0h-0BFh \
+  -ACOMMON=070h-07Fh -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-016Fh \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pfunctab=CODE \
+  -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h \
+  -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA \
+  -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+  startup.obj ms83f080_dcmotor.obj 
+
+Object code version is 3.10
+
+Machine type is 16F685
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                             10       10        1        8       0
+                reset_vec                             0        0        1        0       0
+ms83f080_dcmotor.obj
+                intentry                              4        4        C        8       0
+                text223                             1B4      1B4        B        8       0
+                text222                             1BF      1BF        9        8       0
+                text221                              91       91       32        8       0
+                text220                             116      116       28        8       0
+                text219                              EE       EE       28        8       0
+                text218                             1A3      1A3       11        8       0
+                text217                              C3       C3       2B        8       0
+                text216                             18D      18D       16        8       0
+                text215                             177      177       16        8       0
+                text214                             13E      13E       1E        8       0
+                text213                             15C      15C       1B        8       0
+                text212                              11       11       42        8       0
+                maintext                             53       53       3E        8       0
+                cstackCOMMON                         70       70        A       70       1
+                bssBANK0                             20       20        2       20       1
+                bssCOMMON                            7A       7A        4       70       1
+                cinit                               1C8      1C8        8        8       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CONST          
+
+        CLASS   CODE           
+                end_init                             10       10        1         0
+                intentry                              4        4        C         0
+                reset_vec                             0        0        1         0
+                text223                             1B4      1B4        B         0
+                text222                             1BF      1BF        9         0
+                text221                              91       91       32         0
+                text220                             116      116       28         0
+                text219                              EE       EE       28         0
+                text218                             1A3      1A3       11         0
+                text217                              C3       C3       2B         0
+                text216                             18D      18D       16         0
+                text215                             177      177       16         0
+                text214                             13E      13E       1E         0
+                text213                             15C      15C       1B         0
+                text212                              11       11       42         0
+                maintext                             53       53       3E         0
+                cinit                               1C8      1C8        8         0
+
+        CLASS   STRCODE        
+
+        CLASS   ENTRY          
+
+        CLASS   STRING         
+
+        CLASS   BANK0          
+                bssBANK0                             20       20        2         1
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+                abs_s1                              18C      18C        1         1
+                abs_s1                              19D      19D        2         1
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        A         1
+                bssCOMMON                            7A       7A        4         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   BANK2          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                intentry                       000004  0001CC  0001D0         8       0  CODE        2
+                bssBANK0                       000020  000002  000022        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            022-06F            4E           1
+        BANK1            0A0-0BF            20           1
+        CODE             001-003             3           2
+                         1D0-7FF           630
+        CONFIG           2007-2007             1           2
+        CONST            001-003             3           2
+                         1D0-7FF           100
+        EEDATA           2100-21FF           100           2
+        ENTRY            001-003             3           2
+                         1D0-7FF           100
+        IDLOC            2000-2003             4           2
+        RAM              022-06F            4E           1
+                         0A0-0BF            20
+        SFR0             000-01F            20           1
+        SFR1             080-09F            20           1
+        SFR2             100-16F            70           1
+        STRCODE          001-003             3           2
+                         1D0-7FF           630
+        STRING           001-003             3           2
+                         1D0-7FF           100
+
+                                  Symbol Table
+
+??_ADC_Init             cstackCOMMON 07A
+??_Delay_xms            cstackCOMMON 076
+??_GPIO_Init            cstackCOMMON 074
+??_GetADCValue          cstackCOMMON 076
+??_ISR                  cstackCOMMON 070
+??_PWM4_Init            cstackCOMMON 074
+??_PWM5_Init            cstackCOMMON 074
+??_SetPWM_4_Duty        cstackCOMMON 076
+??_SetPWM_5_Duty        cstackCOMMON 076
+??_System_init          cstackCOMMON 074
+??_isSwitchOn           cstackCOMMON 07A
+??_main                 cstackCOMMON 07A
+??_switch_pwm           cstackCOMMON 074
+?_ADC_Init              cstackCOMMON 070
+?_Delay_xms             cstackCOMMON 074
+?_GPIO_Init             cstackCOMMON 070
+?_GetADCValue           cstackCOMMON 074
+?_ISR                   cstackCOMMON 070
+?_PWM4_Init             cstackCOMMON 070
+?_PWM5_Init             cstackCOMMON 070
+?_SetPWM_4_Duty         cstackCOMMON 074
+?_SetPWM_5_Duty         cstackCOMMON 074
+?_System_init           cstackCOMMON 070
+?_isSwitchOn            cstackCOMMON 070
+?_main                  cstackCOMMON 070
+?_switch_pwm            cstackCOMMON 070
+Delay_xms@i             cstackCOMMON 078
+Delay_xms@x             cstackCOMMON 074
+GetADCValue@ADC_num     cstackCOMMON 078
+SetPWM_4_Duty@dudata    cstackCOMMON 079
+SetPWM_4_Duty@duty      cstackCOMMON 074
+SetPWM_5_Duty@dudata    cstackCOMMON 079
+SetPWM_5_Duty@duty      cstackCOMMON 074
+_ADCON0                 (abs)        01F
+_ADCS0                  (abs)        4FC
+_ADCS1                  (abs)        4FD
+_ADCS2                  (abs)        4FE
+_ADC_Init               text213      15C
+_ADC_Value              bssCOMMON    07A
+_ADFM                   (abs)        0FF
+_ADON                   (abs)        0F8
+_ADRESH                 (abs)        01E
+_ADRESL                 (abs)        09E
+_ANSEL0                 (abs)        488
+_ANSEL1                 (abs)        489
+_ANSEL2                 (abs)        48A
+_ANSEL3                 (abs)        48B
+_ANSEL4                 (abs)        48C
+_ANSEL5                 (abs)        48D
+_ANSEL6                 (abs)        48E
+_ANSEL7                 (abs)        48F
+_C1SEN                  (abs)        CF5
+_C2REN                  (abs)        CF4
+_CARRY                  (abs)        018
+_CHS0                   (abs)        0FA
+_CHS1                   (abs)        0FB
+_CHS2                   (abs)        0FC
+_CM0                    (abs)        0C8
+_CM1                    (abs)        0C9
+_CM2                    (abs)        0CA
+_DIVS                   (abs)        4FF
+_Delay_xms              text214      13E
+_EEADR                  (abs)        09B
+_EECON1                 (abs)        09C
+_EECON2                 (abs)        09D
+_EEDATA                 (abs)        09A
+_EEPGD                  (abs)        C67
+_GIE                    (abs)        05F
+_GO_DONE                (abs)        0F9
+_GPIO_Init              text221      091
+_GetADCValue            text217      0C3
+_ISR                    text223      1B4
+_OPTION                 (abs)        081
+_OSCCON                 (abs)        08F
+_P4BZR                  (abs)        8A8
+_P4CKSRC0               (abs)        8A9
+_P4CKSRC1               (abs)        8AA
+_P4CKSRC2               (abs)        8AB
+_P4EN                   (abs)        8B7
+_P4INTS                 (abs)        8AF
+_P4PER0                 (abs)        8AC
+_P4PER1                 (abs)        8AD
+_P4PER2                 (abs)        8AE
+_P4POL                  (abs)        8B6
+_P5BZR                  (abs)        8D8
+_P5CKSRC0               (abs)        8D9
+_P5CKSRC1               (abs)        8DA
+_P5CKSRC2               (abs)        8DB
+_P5EN                   (abs)        8E7
+_P5INTS                 (abs)        8DF
+_P5PER0                 (abs)        8DC
+_P5PER1                 (abs)        8DD
+_P5PER2                 (abs)        8DE
+_P5POL                  (abs)        8E6
+_PA6                    (abs)        02E
+_PC2                    (abs)        03A
+_PC3                    (abs)        03B
+_PR4L                   (abs)        114
+_PR5L                   (abs)        11A
+_PSTRCON                (abs)        19D
+_PULSR                  (abs)        CF2
+_PULSS                  (abs)        CF3
+_PWM4_Init              text220      116
+_PWM5_Init              text219      0EE
+_PWM_SET                bssBANK0     020
+_RD                     (abs)        4E0
+_SR0                    (abs)        CF6
+_SR1                    (abs)        CF7
+_SRCON                  (abs)        19E
+_STRA                   (abs)        CE8
+_STRB                   (abs)        CE9
+_STRC                   (abs)        CEA
+_STRD                   (abs)        CEB
+_STRSYNC                (abs)        CEC
+_SetPWM_4_Duty          text216      18D
+_SetPWM_5_Duty          text215      177
+_System_init            text222      1BF
+_T4CKDIV                (abs)        117
+_T5CKDIV                (abs)        11D
+_TMR4H                  (abs)        113
+_TMR4IE                 (abs)        8B1
+_TMR4IF                 (abs)        8B0
+_TMR4ON                 (abs)        8B2
+_TMR4PS0                (abs)        8B3
+_TMR4PS1                (abs)        8B4
+_TMR4PS2                (abs)        8B5
+_TMR5H                  (abs)        119
+_TMR5IE                 (abs)        8E1
+_TMR5IF                 (abs)        8E0
+_TMR5ON                 (abs)        8E2
+_TMR5PS0                (abs)        8E3
+_TMR5PS1                (abs)        8E4
+_TMR5PS2                (abs)        8E5
+_TRISA0                 (abs)        428
+_TRISA1                 (abs)        429
+_TRISA2                 (abs)        42A
+_TRISA3                 (abs)        42B
+_TRISA4                 (abs)        42C
+_TRISA5                 (abs)        42D
+_TRISA6                 (abs)        42E
+_TRISA7                 (abs)        42F
+_TRISC0                 (abs)        438
+_TRISC1                 (abs)        439
+_TRISC2                 (abs)        43A
+_TRISC3                 (abs)        43B
+_TRISC4                 (abs)        43C
+_TRISC5                 (abs)        43D
+_VCFG0                  (abs)        0FD
+_WDTCON                 (abs)        018
+_WPDA4                  (abs)        44C
+_WPDC1                  (abs)        44B
+_WPDC2                  (abs)        44A
+_WPDC3                  (abs)        449
+_WPUA0                  (abs)        4A8
+_WPUA1                  (abs)        4A9
+_WPUA2                  (abs)        4AA
+_WPUA3                  (abs)        4AB
+_WPUA4                  (abs)        4AC
+_WPUA5                  (abs)        4AD
+_WPUA6                  (abs)        4AE
+_WPUA7                  (abs)        4AF
+_WPUC0                  (abs)        440
+_WPUC1                  (abs)        441
+_WPUC2                  (abs)        442
+_WPUC3                  (abs)        443
+_WPUC4                  (abs)        444
+_WPUC5                  (abs)        445
+_WR                     (abs)        4E8
+_WREN                   (abs)        C62
+__Habs1                 abs1         000
+__Hbank0                bank0        000
+__Hbank1                bank1        000
+__Hbank2                bank2        000
+__HbssBANK0             bssBANK0     000
+__HbssCOMMON            bssCOMMON    000
+__Hcinit                cinit        000
+__Hclrtext              clrtext      000
+__Hcode                 code         000
+__Hcommon               common       000
+__Hconfig               config       000
+__HcstackCOMMON         cstackCOMMON 000
+__Heeprom_data          eeprom_data  000
+__Hend_init             end_init     011
+__Hfunctab              functab      000
+__Hidloc                idloc        000
+__Hinit                 init         010
+__Hintentry             intentry     010
+__Hmaintext             maintext     000
+__Hpowerup              powerup      000
+__Hram                  ram          000
+__Hreset_vec            reset_vec    001
+__Hsfr0                 sfr0         000
+__Hsfr1                 sfr1         000
+__Hsfr2                 sfr2         000
+__Hstrings              strings      000
+__Htext                 text         000
+__Labs1                 abs1         000
+__Lbank0                bank0        000
+__Lbank1                bank1        000
+__Lbank2                bank2        000
+__LbssBANK0             bssBANK0     000
+__LbssCOMMON            bssCOMMON    000
+__Lcinit                cinit        000
+__Lclrtext              clrtext      000
+__Lcode                 code         000
+__Lcommon               common       000
+__Lconfig               config       000
+__LcstackCOMMON         cstackCOMMON 000
+__Leeprom_data          eeprom_data  000
+__Lend_init             end_init     010
+__Lfunctab              functab      000
+__Lidloc                idloc        000
+__Linit                 init         010
+__Lintentry             intentry     004
+__Lmaintext             maintext     000
+__Lpowerup              powerup      000
+__Lram                  ram          000
+__Lreset_vec            reset_vec    000
+__Lsfr0                 sfr0         000
+__Lsfr1                 sfr1         000
+__Lsfr2                 sfr2         000
+__Lstrings              strings      000
+__Ltext                 text         000
+__S0                    (abs)        1D0
+__S1                    (abs)        07E
+__S2                    (abs)        000
+__end_of_ADC_Init       text213      177
+__end_of_Delay_xms      text214      15C
+__end_of_GPIO_Init      text221      0C3
+__end_of_GetADCValue    text217      0EE
+__end_of_ISR            text223      1BF
+__end_of_PWM4_Init      text220      13E
+__end_of_PWM5_Init      text219      116
+__end_of_SetPWM_4_Duty  text216      1A3
+__end_of_SetPWM_5_Duty  text215      18D
+__end_of_System_init    text222      1C8
+__end_of_isSwitchOn     text212      053
+__end_of_main           maintext     091
+__end_of_switch_pwm     text218      1B4
+__pbssBANK0             bssBANK0     020
+__pbssCOMMON            bssCOMMON    07A
+__pcstackCOMMON         cstackCOMMON 070
+__pintentry             intentry     004
+__pmaintext             maintext     053
+__ptext211              text211      000
+__ptext212              text212      011
+__ptext213              text213      15C
+__ptext214              text214      13E
+__ptext215              text215      177
+__ptext216              text216      18D
+__ptext217              text217      0C3
+__ptext218              text218      1A3
+__ptext219              text219      0EE
+__ptext220              text220      116
+__ptext221              text221      091
+__ptext222              text222      1BF
+__ptext223              text223      1B4
+__ptext224              text224      000
+__size_of_ADC_Init      (abs)        000
+__size_of_Delay_xms     (abs)        000
+__size_of_GPIO_Init     (abs)        000
+__size_of_GetADCValue   (abs)        000
+__size_of_ISR           (abs)        000
+__size_of_PWM4_Init     (abs)        000
+__size_of_PWM5_Init     (abs)        000
+__size_of_SetPWM_4_Duty (abs)        000
+__size_of_SetPWM_5_Duty (abs)        000
+__size_of_System_init   (abs)        000
+__size_of_isSwitchOn    (abs)        000
+__size_of_main          (abs)        000
+__size_of_switch_pwm    (abs)        000
+_exit                   init         010
+_flag0                  bssCOMMON    07C
+_flag1                  bssCOMMON    07D
+_isSwitchOn             text212      011
+_main                   maintext     053
+_switch_pwm             text218      1A3
+btemp                   (abs)        07E
+end_of_initialization   cinit        1CE
+interrupt_function      intentry     004
+intlevel0               functab      000
+intlevel1               functab      000
+intlevel2               functab      000
+intlevel3               functab      000
+intlevel4               functab      000
+intlevel5               functab      000
+reset_vec               reset_vec    000
+saved_w                 (abs)        07E
+start                   init         010
+start_initialization    cinit        1C8
+wtemp0                  (abs)        07E

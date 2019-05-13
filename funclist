@@ -1,0 +1,14 @@
+_Delay_xms: CODE, 318 0 30
+_ISR: CODE, 436 0 11
+_main: CODE, 83 0 62
+_GetADCValue: CODE, 195 0 43
+_switch_pwm: CODE, 419 0 17
+_isSwitchOn: CODE, 17 0 66
+_GPIO_Init: CODE, 145 0 50
+_PWM4_Init: CODE, 278 0 40
+_System_init: CODE, 447 0 9
+_PWM5_Init: CODE, 238 0 40
+_ADC_Init: CODE, 348 0 27
+_SetPWM_4_Duty: CODE, 397 0 22
+_SetPWM_5_Duty: CODE, 375 0 22
+Total: 439
